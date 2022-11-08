@@ -10,9 +10,15 @@ If you already have some nvim configuration, please make sure to save backup of 
 Clone repository inside **~/.config/nvim/**
 
 ```
-git clone git@github.com:Antoniozinchenko/nvim.git
+git clone git@github.com:Antoniozinchenko/nvim.git ~/.config/nvim
 ```
 
 ### Install Plugins
 
-Just open `~/.config/nvim/lua/azinch/plugins-setup.lua` file and save it. It should start installing all needed plugins.
+Just open `~/.config/nvim/lua/azinch/plugins-setup.lua` in nvim
+
+```
+nvim ~/.config/nvim/lua/azinch/plugins-setup.lua
+```
+
+Then save it. It should start installing all needed plugins.
