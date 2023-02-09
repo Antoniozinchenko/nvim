@@ -1,0 +1,24 @@
+{
+  "name": "azinch-snippets",
+  "author": "antoniozinchenko",
+  "engines": {
+    "vscode": "^1.74.3"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "javascript",
+          "javascriptreact"
+        ],
+        "path": "./javascript.json"
+      },
+      {
+        "language": [
+          "dart"
+        ],
+        "path": "./dart.json"
+      }
+    ]
+  }
+}

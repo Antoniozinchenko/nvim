@@ -19,7 +19,8 @@ end
 -- load vs-code like snippets from plugins (e.g. friendly-snippets)
 -- require("luasnip/loaders/from_vscode").load({ include = { "dart" } })
 luasnip.filetype_extend("dart", { "flutter" })
-require("luasnip/loaders/from_vscode").lazy_load()
+require("luasnip.loaders.from_vscode").lazy_load()
+require("luasnip.loaders.from_vscode").load({ paths = { "~/.config/nvim/snippets" } })
 
 vim.opt.completeopt = "menu,menuone,noselect"
 
@@ -81,4 +82,24 @@ cmp.setup({
 			ellipsis_char = "...",
 		}),
 	},
+})
+
+local s = luasnip.snippet
+local sn = luasnip.snippet_node
+local t = luasnip.text_node
+local i = luasnip.insert_node
+local f = luasnip.function_node
+local c = luasnip.choice_node
+local d = luasnip.dynamic_node
+local r = luasnip.restore_node
+local l = require("luasnip.extras").lambda
+local rep = require("luasnip.extras").rep
+local p = require("luasnip.extras").partial
+local m = require("luasnip.extras").match
+
+luasnip.add_snippets("dart", {
+
+	s("classTest", {
+		t("//This is test snippet created by lua "),
+	}),
 })

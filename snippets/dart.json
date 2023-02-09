@@ -1,0 +1,39 @@
+{
+  "JsonSerializable class": {
+    "prefix": "classjson",
+    "body": [
+      "import 'package:json_annotation/json_annotation.dart';",
+      "",
+      "part '${TM_FILENAME_BASE}.g.dart';",
+      "",
+      "@JsonSerializable()",
+      "class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
+      "  const ${1}();",
+      "",
+      "  factory ${1}.fromJson(Map<String, dynamic> json) => _$${1}FromJson(json);",
+      "",
+      "  Map<String, dynamic> toJson() => _$${1}ToJson(this);",
+      "}"
+    ],
+    "description": "Class generated with json serializable annotation"
+  },
+  "Page widget": {
+    "prefix": "pageW",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "",
+      "class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends StatelessWidget {",
+      "  const ${1}({super.key});",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return Scaffold(",
+      "      appBar: AppBar(title: const Text('${1}')),",
+      "      body: const Center(child: Text('${1}')),",
+      "    );",
+      "  }",
+      "}"
+    ],
+    "description": "Simple Stateless widget with Scaffold and AppBar"
+  }
+}

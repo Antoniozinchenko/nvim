@@ -1,0 +1,56 @@
+{
+  "Mock redux": {
+    "prefix": "mockRdx",
+    "body": [
+      "const mockStore = {};",
+      "const mockDispatch = jest.fn();",
+      "",
+      "jest.mock('react-redux', () => ({",
+      "\tuseSelector: jest.fn((cb) => cb(mockStore)),",
+      "\tuseDispatch: jest.fn(() => mockDispatch),",
+      "\tconnect:",
+      "\t\t(mapStateToProps, mapDispatchProps) => (WrappedComponent) => (props) => {",
+      "\t\t\tconst stateProps = mapStateToProps ? mapStateToProps(mockStore) : {};",
+      "\t\t\tconst dispatchProps = mapDispatchProps",
+      "\t\t\t\t? mapDispatchProps(mockDispatch)",
+      "\t\t\t\t: {};",
+      "\t\t\treturn <WrappedComponent {...stateProps} {...dispatchProps} {...props} />;",
+      "\t\t},",
+      "}));"
+    ],
+    "description": "Mock react redux"
+  },
+  "Test React component": {
+    "prefix": "testComp",
+    "body": [
+      "import React from 'react';",
+      "import MyComponent from '.';",
+      "",
+      "const mockStore = {",
+      "\tauth: { user: { id: 1, isOhAdmin: true } },",
+      "\tportal: { id: 7 },",
+      "\tpermissions: { 1: { oh: 'sentinel_access' } },",
+      "};",
+      "const mockDispatch = jest.fn();",
+      "",
+      "jest.mock('react-redux', () => ({",
+      "\tuseSelector: jest.fn((cb) => cb(mockStore)),",
+      "\tuseDispatch: jest.fn(() => mockDispatch),",
+      "\tconnect:",
+      "\t\t(mapStateToProps, mapDispatchProps) => (WrappedComponent) => (props) => {",
+      "\t\t\tconst stateProps = mapStateToProps ? mapStateToProps(mockStore) : {};",
+      "\t\t\tconst dispatchProps = mapDispatchProps",
+      "\t\t\t\t? mapDispatchProps(mockDispatch)",
+      "\t\t\t\t: {};",
+      "\t\t\treturn <WrappedComponent {...stateProps} {...dispatchProps} {...props} />;",
+      "\t\t},",
+      "}));",
+      "",
+      "test('render my component', async () => {",
+      "\tconst { getByTestId, queryByTestId } = render(<MyComponent />);",
+      "\tawait waitForElementToBeRemoved(() => getByTestId('progressbar'));",
+      "});"
+    ],
+    "description": "Basic test for react component with mocked react redux"
+  }
+}

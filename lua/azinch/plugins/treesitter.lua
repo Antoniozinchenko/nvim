@@ -27,7 +27,6 @@ treesitter.setup({
 		"svelte",
 		"graphql",
 		"bash",
-		"lua",
 		"vim",
 		"dockerfile",
 		"gitignore",
