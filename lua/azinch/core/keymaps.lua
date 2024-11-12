@@ -74,6 +74,15 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
 -- flutter
-keymap.set("n", "<leader>fo", "<cmd>FlutterOutlineToggle<CR>")
-keymap.set("n", "<leader>fvm", "<cmd>Telescope flutter fvm<cr>") -- select flutter version from fvm prompt
-keymap.set("n", "<leader>fl", "<cmd>Telescope flutter commands<cr>") -- Open flutter commands prompt
+keymap.set("n", "<leader>Fo", "<cmd>FlutterOutlineToggle<CR>")
+keymap.set("n", "<leader>Fv", "<cmd>Telescope flutter fvm<cr>") -- select flutter version from fvm prompt
+keymap.set("n", "<leader>Fc", "<cmd>Telescope flutter commands<cr>") -- Open flutter commands prompt
+keymap.set("n", "<leader>Fd", "<cmd>FlutterDevices<CR>") -- run app on device
+keymap.set("n", "<leader>Fe", "<cmd>FlutterEmulators<CR>") -- open emulators
+keymap.set("n", "<leader>Fr", "<cmd>FlutterReload<cr>") -- hot reload app
+keymap.set("n", "<leader>FR", "<cmd>FlutterRestart<cr>") -- full restart app
+keymap.set("n", "<leader>Fq", "<cmd>FlutterQuit<cr>") -- close running app
+
+-- flutter intl
+keymap.set("n", "<leader>FL", "<cmd>FlutterIntlGenerate<cr>") -- Generate classes based on arb files
+keymap.set("n", "<leader>Fl", "<cmd>FlutterIntlDownload<cr>") -- Download arb files from localizely

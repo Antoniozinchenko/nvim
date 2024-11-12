@@ -51,7 +51,7 @@ return packer.startup(function(use)
 	use("nvim-tree/nvim-tree.lua")
 
 	-- vs-code like icons
-	use("kyazdani42/nvim-web-devicons")
+	use("nvim-tree/nvim-web-devicons")
 
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
@@ -105,6 +105,17 @@ return packer.startup(function(use)
 	-- Flutter/Dart plugins
 	use("akinsho/flutter-tools.nvim")
 	use("natebosch/vim-lsc")
+
+	use("antoniozinchenko/flutter-intl")
+
+	use("github/copilot.vim")
+
+	use({
+		"glacambre/firenvim",
+		run = function()
+			vim.fn["firenvim#install"](0)
+		end,
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()
