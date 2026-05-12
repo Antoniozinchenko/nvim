@@ -1,0 +1,55 @@
+{
+  "Golden tag annotation": {
+    "prefix": "gld",
+    "body": [
+      "@golden",
+      "@testMethodName: testGoldens"
+    ],
+    "description": "Add annotations for golden scenarios"
+  },
+  "Golden toolkit import": {
+    "prefix": "gldImport",
+    "body": [
+      "import 'package:golden_toolkit/golden_toolkit.dart';"
+    ],
+    "description": "Import golden toolkit"
+  },
+  "I don't see widget with key step": {
+    "prefix": "dontSeeWidget",
+    "body": [
+      "And I don't see widget with key {'${1}'}"
+    ],
+    "description": "Add step expecting do not see widget with specific key on screen"
+  },
+  "I see widget with key step": {
+    "prefix": "seeWidget",
+    "body": [
+      "And I see widget with key {'${1}'}"
+    ],
+    "description": "Add step expecting to see widget with specific key on screen"
+  },
+
+  "I see widget with key inside widget with key step": {
+    "prefix": "widgetInsideWidget",
+    "body": [
+      "And I see widget with key {'${1}'} inside widget with key {'${2}'}"
+    ],
+    "description": "Add step expecting to see widget with specific key inside another widget on screen"
+  },
+  
+  
+  "I see text step": {
+    "prefix": "seeText",
+    "body": [
+      "And I see {'${1}'} text"
+    ],
+    "description": "Add step expecting to see text on screen"
+  },
+  "And screenshot verified": {
+    "prefix": "screenshot",
+    "body": [
+      "And screenshot {'${1}'} verified"
+    ],
+    "description": "Add step for screenshot verification in golden tests"
+  }
+}
