@@ -14,6 +14,9 @@ keymap("n", "<leader>q", "<cmd>confirm q<CR>", { desc = "Quit" })
 -- Delete single character without copying into register
 keymap("n", "x", '"_x', opts)
 
+-- Clear search highlights
+keymap("n", "<leader>h", "<cmd>noh<CR>")
+
 ----------------------------------------------------------------------
 -- Splits
 ----------------------------------------------------------------------

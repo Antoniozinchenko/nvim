@@ -61,6 +61,7 @@ return {
       keymap("n", "<leader>Fq", "<cmd>FlutterQuit<CR>", { desc = "Quit app" })
       keymap("n", "<leader>FL", "<cmd>FlutterIntlGenerate<CR>", { desc = "Intl generate" })
       keymap("n", "<leader>Fl", "<cmd>FlutterIntlDownload<CR>", { desc = "Intl download .arb" })
+      keymap("n", "<leader>Fu", "<cmd>FlutterIntlUpload<CR>", { desc = "Intl upload .arb" })
       keymap("n", "<leader>Fv", "<cmd>Telescope flutter fvm<CR>", { desc = "Flutter version" })
     end,
   },
